@@ -1,4 +1,5 @@
 require_relative 'spec_helper.rb'
+require "pry"
 
 describe "Associations" do
   before do
@@ -42,7 +43,7 @@ describe "Associations" do
         @owner.buy_cat("Crookshanks")
         @owner.buy_cat("Whiskers")
         @owner.buy_cat("Garfield")
-
+        
         @owner.cats.each do |cat|
           expect(cat).to be_a(Cat)
         end
